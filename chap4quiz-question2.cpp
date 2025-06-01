@@ -23,24 +23,32 @@ char returnUserMathOperator()
 void calculateResult(double value1, char operation, double value2)
 {
     double result{};
+    bool valid{false};
 
-    switch(operation)
+    while (!valid)
     {
-        case '+':
-            result = value1 + value2;
-            break;
-        case '-':
-            result = value1 - value2;
-            break;
-        case '*':
-            result = value1 * value2;
-            break;
-        case '/':
-            result = value1 * value2;
-            break;
-        default:
-            std::cout << "Invalid operator." << std::endl;
-            return;
+        switch (operation)
+        {
+            case '+':
+                result = value1 + value2;
+                valid = true;
+                break;
+            case '-':
+                result = value1 - value2;
+                valid = true;
+                break;
+            case '*':
+                result = value1 * value2;
+                valid = true;
+                break;
+            case '/':
+                result = value1 * value2;
+                valid = true;
+                break;
+            default:
+                std::cout << "Invalid operator. Try again." << std::endl;
+                operation = returnUserMathOperator();
+        }
     }
 
     std::cout << value1 << " " << operation << " " << value2 << " is " << result << std::endl;
