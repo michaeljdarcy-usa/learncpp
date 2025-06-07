@@ -9,7 +9,11 @@ int main(int argc, char * argv[])
     std::string name{};
     std::getline(std::cin >> std::ws, name);
 
-    std::cout << name;
+    std::cout << "Enter your age: " << std::endl;
+    int age{};
+    std::cin >> age;
+
+    std::cout << name << " " << age;
 
     return 0;
 }
