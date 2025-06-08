@@ -13,7 +13,10 @@ int main(int argc, char * argv[])
     int age{};
     std::cin >> age;
 
-    std::cout << name << " " << age;
+    //std::cout << name << " " << age;
+
+    int nameLength{static_cast<int>(name.length())};
+    std::cout << "Your age + length of name is: " << nameLength << "\n";
 
     return 0;
 }
