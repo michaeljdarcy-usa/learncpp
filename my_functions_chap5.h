@@ -6,4 +6,7 @@
 std::string getName();
 void printName(std::string);
 
+int getAge();
+void printAge(int age);
+
 #endif
