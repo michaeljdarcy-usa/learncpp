@@ -14,6 +14,16 @@ int main(int argc, char* argv[])
     std::cout << "\n";
     printName(name2);
     printAge(age2);
+    std::cout << "\n";
+
+    if (age1 > age2)
+    {
+        std::cout << name1 << "'s age is older than " << name2 << "\n";
+    }
+    else 
+    {
+        std::cout << name2 << "'s age is older than " << name1 << "\n";
+    }
 
     return 0; 
 }
